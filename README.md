@@ -2,41 +2,52 @@
 # pinguinokbron
 
 ## 📌 Descripción del Proyecto
-Este repositorio contiene el diseño, ruteo y documentación técnica para la fabricación de una placa de desarrollo **Pinguino de 32 bits**. El proyecto se basa en la filosofía de hardware libre, ofreciendo una alternativa robusta a las plataformas tradicionales de 8 bits al integrar la potencia de la arquitectura MIPS32.
+Este repositorio contiene el diseño, ruteo y documentación técnica integral para la fabricación de una placa de desarrollo de hardware libre basada en la plataforma Pinguino de 32 bits. El diseño arquitectónico se centra en el microcontrolador PIC32MX220F032D-I/PT en encapsulado TQFP-44, una solución robusta que introduce el procesamiento de alto rendimiento a entornos de prototipado rápido. 
 
-El diseño está centrado en el microcontrolador **PIC32MX220F032D-I/PT**, destacando por su capacidad de comunicación USB nativa (sin requerir puentes seriales externos) y su optimización para prototipado avanzado.
+A diferencia de los sistemas tradicionales, este hardware aprovecha el motor USB nativo del silicio para permitir la programación directa y la comunicación con el host sin requerir circuitos integrados puente de conversión serial. Para optimizar la integridad de la señal a altas frecuencias y reducir el área física de la PCB, el diseño implementa una transición completa hacia componentes pasivos de montaje superficial en formato 0603, complementado con un sistema versátil de gestión de energía diseñado para aplicaciones tanto de escritorio como autónomas.
 
-## 🎯 ¿Qué se estará desarrollando en este repositorio?
-El objetivo principal es documentar todo el ciclo de vida del diseño de hardware, desde la concepción del esquemático hasta la generación de los archivos de manufactura. Específicamente, este repositorio alojará:
+## 🎯 Objetivo General
+Diseñar, rutear y documentar una tarjeta de desarrollo de código abierto de 32 bits compatible con el ecosistema Pinguino, optimizando el espacio físico mediante tecnologías de montaje superficial (SMD) y garantizando la estabilidad del sistema para aplicaciones avanzadas de control y sistemas embebidos.
 
-1. **Diseño de PCB y Esquemáticos:** Archivos fuente de ruteo y diagramas esquemáticos (desarrollados en KiCad) listos para su edición o revisión.
-2. **Archivos de Manufactura:** Generación de archivos Gerber y de taladrado (Drill files), aptos tanto para la fabricación industrial como para procesos de mecanizado local (como FlatCAM).
-3. **Lista de Materiales (BOM):** Gestión de la lista de componentes, priorizando tecnología de montaje superficial (SMD en formato 0603) y encapsulados TQFP-44 para optimizar el área de la tarjeta.
-4. **Documentación Técnica:** Justificación de diseño, cálculos de potencia y guías de ensamblaje redactadas bajo estándares profesionales.
+## 📋 Objetivos Específicos
+* Desarrollar el diagrama esquemático completo utilizando la suite KiCad, asegurando la correcta interconexión del microcontrolador PIC32 y sus componentes de soporte críticos.
+* Implementar el diseño físico de la PCB priorizando la reducción de inductancias parásitas mediante el uso de componentes pasivos en formato 0603 y una distribución estratégica de capas.
+* Diseñar un subsistema de alimentación triple e híbrido que acepte fuentes de energía por USB, conector de batería Li-Po de 3.7V y Jack de corriente de 5V DC, garantizando portabilidad y aislamiento ante ruidos transitorios.
+* Aplicar reglas de diseño de alta velocidad para el ruteo del bus USB, implementando pistas con geometría de par diferencial y planos de masa sólidos para el retorno eficiente de corriente.
+* Generar los archivos estándar de manufactura industrial (Gerber y NC Drill) y configuraciones de aislamiento para compatibilidad con sistemas de fresado local mediante herramientas como FlatCAM.
 
-## ⚙️ Características Principales del Hardware
-La placa en desarrollo incluye las siguientes especificaciones técnicas:
-* **Microcontrolador:** PIC32MX220F032D a 40 MHz (Núcleo MIPS32® M4K®).
-* **Memoria:** 32 KB Flash, 8 KB SRAM.
-* **Interfaz USB:** Conector USB Mini-B SMD para programación directa vía Bootloader HID (sin necesidad de programadores externos como PICKit).
-* **Gestión de Energía Híbrida:** * Operación lógica a 3.3V con regulador LDO dedicado.
-  * Puerto JST integrado para alimentación autónoma mediante baterías Li-Po de 3.7V.
-  * Entrada auxiliar por Jack de 5V DC.
-* **Formato de Componentes:** Transición a componentes pasivos SMD (0603) para minimizar inductancias parásitas y mejorar la integridad de señal a altas frecuencias.
+## ⚙️ Características Técnicas del Hardware
+* Microcontrolador Principal: Microchip PIC32MX220F032D con núcleo RISC MIPS32 M4K, operando a frecuencias de hasta 40 MHz mediante síntesis por PLL interno.
+* Memoria Interna: 32 KB de memoria Flash para programa y 8 KB de SRAM para datos.
+* Conectividad USB: Puerto USB Mini-B con pines de datos protegidos y líneas trazadas con impedancia controlada para comunicación Full-Speed de 12 Mbps.
+* Periféricos Avanzados: Soporte para Peripheral Pin Select (PPS) que permite la reasignación dinámica de pines, módulos ADC de alta velocidad, comparadores analógicos y temporizadores de precisión.
+* Formato de Componentes: Encapsulado principal TQFP-44 y componentes pasivos distribuidos en encapsulados SMD 0603.
+* Gestión de Potencia: Regulador LDO integrado de baja caída para la línea lógica de 3.3V y un circuito de filtrado específico con capacitores de bajo ESR para el núcleo interno de 1.8V (VCORE/VCAP).
+
+## 🔄 Funcionamiento del Sistema
+El funcionamiento de la tarjeta se divide en dos fases operativas gobernadas por un Bootloader de clase HID (Human Interface Device) preprogramado en la memoria de arranque dedicada del chip:
+
+* Modo de Programación: Al energizar la tarjeta o presionar el botón de Reset mientras se mantiene activo el botón de Usuario (USER), el microcontrolador entra en modo de inicialización USB. Al ser detectado como un dispositivo HID nativo por el sistema operativo de la computadora, no requiere controladores específicos. El IDE de Pinguino se comunica directamente con este cargador para inyectar el nuevo firmware en la memoria Flash principal de manera transparente.
+* Modo de Ejecución: Si el botón de Usuario no está presionado al arrancar, el flujo de ejecución salta el bloque del bootloader y se dirige directamente a la dirección de memoria de la aplicación de usuario, iniciando el ciclo de trabajo del firmware de manera determinista y de baja latencia.
+
+## 🔀 Diferencias Clave
+* Frente a Plataformas de 8 bits (AVR/PIC18): El núcleo MIPS32 procesa palabras completas de 32 bits por ciclo de instrucción, cuenta con un multiplicador/divisor por hardware para algoritmos complejos como el control PID, y posee una arquitectura de memoria virtual más eficiente para el manejo de pilas de datos y sistemas operativos de tiempo real (RTOS).
+* Frente a Diseños de Desarrollo Comunes: Elimina la dependencia de convertidores externos como el FT232 o el CH340, lo que reduce el costo de la lista de materiales (BOM) y el consumo de corriente general. Además, el uso de componentes pasivos SMD 0603 frente a los de orificio pasante (THT) garantiza un desempeño superior frente a ruidos electromagnéticos a altas frecuencias.
+
+## 📊 Resultados Esperados
+* Disponibilidad de los diagramas esquemáticos y archivos de ruteo de la PCB completamente verificados bajo reglas de diseño eléctrico (ERC/DRC).
+* Generación de la documentación de manufactura lista para su envío a plantas de fabricación de circuitos impresos o para su procesamiento en maquinaria CNC local.
+* Una plataforma de desarrollo de código abierto completamente funcional, capaz de programarse de forma sencilla y que sirva como base para proyectos académicos y profesionales de ingeniería electrónica.
 
 ## 📂 Estructura del Repositorio
-
-* `/Hardware`: Archivos fuente del esquemático y diseño de la PCB.
-* `/Fabricacion`: Archivos Gerber, NC Drill y configuraciones para manufactura.
-* `/Documentacion`: Reportes técnicos, justificación de componentes y lista de materiales (BOM).
-* `/Imagenes`: Renders 3D de la placa y diagramas explicativos.
+* `/Hardware`: Archivos fuente del esquemático y diseño de la PCB en KiCad.
+* `/Fabricacion`: Archivos Gerber, NC Drill y perfiles de configuración para aislamiento o FlatCAM.
+* `/Documentacion`: Justificación técnica de componentes, análisis de ruteo y lista de materiales (BOM).
+* `/Imagenes`: Capturas del flujo de diseño, diagramas de bloques y renders tridimensionales de la tarjeta.
 
 ## 🚀 Próximos Pasos
-- [ ] Finalización del diagrama esquemático.
-- [ ] Asignación de huellas (footprints) para componentes SMD.
-- [ ] Ruteo de pistas, priorizando pares diferenciales para la línea USB y planos de masa.
-- [ ] Verificación de Reglas de Diseño (DRC).
-- [ ] Exportación de archivos de producción.
-
----
-*Este proyecto es de código abierto y está diseñado para impulsar el aprendizaje en el diseño de sistemas embebidos 3D*
+- [ ] Finalización del diagrama esquemático en la suite de diseño.
+- [ ] Asignación de huellas físicas y definición del contorno de la PCB.
+- [ ] Ruteo de pistas críticas (Pares diferenciales USB y líneas de desacoplo de energía).
+- [ ] Vertido de polígonos de cobre para planos de masa en ambas capas.
+- [ ] Verificación de Reglas de Diseño (DRC) y exportación de archivos Gerber de producción.
