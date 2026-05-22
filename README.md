@@ -39,4 +39,4 @@ La placa en desarrollo incluye las siguientes especificaciones técnicas:
 - [ ] Exportación de archivos de producción.
 
 ---
-*Este proyecto es de código abierto y está diseñado para impulsar el aprendizaje en el diseño de sistemas embebidos 3D"
+*Este proyecto es de código abierto y está diseñado para impulsar el aprendizaje en el diseño de sistemas embebidos 3D*
