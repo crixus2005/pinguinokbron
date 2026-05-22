@@ -1,4 +1,4 @@
-<img src="./pinguinokbron/CRISTHOPHER/imgg/R.png" alt="Proyecto" width="500">
+<img src="./imgg/R.png" alt="" width="500">
 # pinguinokbron
 
 ## 📌 Descripción del Proyecto
