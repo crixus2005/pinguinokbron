@@ -6,6 +6,12 @@ Este repositorio contiene el diseño, ruteo y documentación técnica integral p
 
 A diferencia de los sistemas tradicionales, este hardware aprovecha el motor USB nativo del silicio para permitir la programación directa y la comunicación con el host sin requerir circuitos integrados puente de conversión serial. Para optimizar la integridad de la señal a altas frecuencias y reducir el área física de la PCB, el diseño implementa una transición completa hacia componentes pasivos de montaje superficial en formato 0603, complementado con un sistema versátil de gestión de energía diseñado para aplicaciones tanto de escritorio como autónomas.
 
+🎯 Misión
+Desarrollar y documentar una placa de hardware libre de 32 bits, compacta y eficiente, que facilite la creación de prototipos y sistemas de control. Buscamos democratizar el acceso a arquitecturas avanzadas y técnicas de montaje superficial (SMD), ofreciendo una herramienta accesible que no dependa de programadores externos para impulsar el aprendizaje práctico en la ingeniería.
+
+👁️ Visión
+Convertir este diseño en un referente dentro de la comunidad Open Hardware para facilitar la transición tecnológica de microcontroladores de 8 a 32 bits. Aspiramos a inspirar a otros desarrolladores a diseñar, manufacturar y programar sus propios circuitos impresos profesionales de manera autónoma.
+
 ## 🎯 Objetivo General
 Diseñar, rutear y documentar una tarjeta de desarrollo de código abierto de 32 bits compatible con el ecosistema Pinguino, optimizando el espacio físico mediante tecnologías de montaje superficial (SMD) y garantizando la estabilidad del sistema para aplicaciones avanzadas de control y sistemas embebidos.
 
