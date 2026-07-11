@@ -52,4 +52,5 @@ El funcionamiento de la tarjeta se divide en dos fases operativas gobernadas por
 * `/Imagenes`: Capturas del flujo de diseño, diagramas de bloques y renders tridimensionales de la tarjeta.
 
 ## Software
+* `/81f7bb81b439db166ceb4c125af8d72d3f33c15a`: Instalacion del IDE v13 funcional. 
 
