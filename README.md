@@ -52,5 +52,5 @@ El funcionamiento de la tarjeta se divide en dos fases operativas gobernadas por
 * `/Imagenes`: Capturas del flujo de diseño, diagramas de bloques y renders tridimensionales de la tarjeta.
 
 ## Software
-* [Descargar Manual Técnico (PDF)](CRISTHOPHER/81f7bb81b439db166ceb4c125af8d72d3f33c15a)
+* [Descargar Manual Técnico (PDF)](https://github.com/crixus2005/pinguinokbron/commit/81f7bb81b439db166ceb4c125af8d72d3f33c15a#diff-b5e7bcfdc35902a24c5f706a157678d197e63033098f8ea4ada287a149665f2a)
 
