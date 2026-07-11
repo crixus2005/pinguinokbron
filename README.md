@@ -51,9 +51,5 @@ El funcionamiento de la tarjeta se divide en dos fases operativas gobernadas por
 * `/Documentacion`: Justificación técnica de componentes, análisis de ruteo y lista de materiales (BOM).
 * `/Imagenes`: Capturas del flujo de diseño, diagramas de bloques y renders tridimensionales de la tarjeta.
 
-## 🚀 Próximos Pasos
-- [ ] Finalización del diagrama esquemático en la suite de diseño.
-- [ ] Asignación de huellas físicas y definición del contorno de la PCB.
-- [ ] Ruteo de pistas críticas (Pares diferenciales USB y líneas de desacoplo de energía).
-- [ ] Vertido de polígonos de cobre para planos de masa en ambas capas.
-- [ ] Verificación de Reglas de Diseño (DRC) y exportación de archivos Gerber de producción.
+## Software
+
