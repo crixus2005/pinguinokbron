@@ -53,4 +53,7 @@ El funcionamiento de la tarjeta se divide en dos fases operativas gobernadas por
 
 ## Software
 * [Descargar Manual Técnico (PDF)](https://github.com/crixus2005/pinguinokbron/commit/81f7bb81b439db166ceb4c125af8d72d3f33c15a#diff-b5e7bcfdc35902a24c5f706a157678d197e63033098f8ea4ada287a149665f2a)
+* [Pruebas Realizadas(PDF)](https://github.com/crixus2005/pinguinokbron/commit/face49c7df8e84991441e2bcef925276f78c8aa6#diff-fa00491aa652b3c92b88237ad1cfa117a6e18f7564a0bf799a0cf93d397e7e9c)
+* [Funciones del IDE(PDF)](https://github.com/crixus2005/pinguinokbron/commit/257e205922fd1c4a0acee62aa337ed467af18745#diff-fbc6b1472b3ad565410e10425a399fc6357ccc6fb184d2f0872c6e6efb9e4d2a)
+* [Justificacion(PDF)](https://github.com/crixus2005/pinguinokbron/commit/ab82b60a6cace32d5f8661014882de9296c66cd2#diff-78e28b5a1c4485077f516bbd1df15ae44786416824b85d47980a6eb1e559c41c)
 
