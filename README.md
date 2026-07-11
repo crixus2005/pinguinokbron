@@ -52,5 +52,5 @@ El funcionamiento de la tarjeta se divide en dos fases operativas gobernadas por
 * `/Imagenes`: Capturas del flujo de diseño, diagramas de bloques y renders tridimensionales de la tarjeta.
 
 ## Software
-* [Descargar Manual Técnico (PDF)](81f7bb81b439db166ceb4c125af8d72d3f33c15a)
+* [Descargar Manual Técnico (PDF)](CRISTHOPHER/Manual de instalación de pingüino IDE v13 en máquina virtual Ubuntu.pdf)
 
