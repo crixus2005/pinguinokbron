@@ -62,7 +62,7 @@ El funcionamiento de la tarjeta se divide en dos fases operativas gobernadas por
 * [Investigacion acerca del diseño de la placa](https://github.com/crixus2005/pinguinokbron/commit/bfa70d29bf90d882ad241d6b863e3f89b4454b63#diff-98231dbeda340ef3d7d9c81aa5cdd85d5b76336862d96f24654ac48ab89d51df)
 * [Diseño fianl de pcb](https://github.com/crixus2005/pinguinokbron/commit/bfa70d29bf90d882ad241d6b863e3f89b4454b63#diff-98231dbeda340ef3d7d9c81aa5cdd85d5b76336862d96f24654ac48ab89d51df)
 
-##Costos y alcance de proyecto
+## Costos y alcance de proyecto
 * [Tabla de cosotos aproximados](https://github.com/crixus2005/pinguinokbron/commit/4ae25433d33d98d2e5e06465b9a8d0c2c3abc08f#diff-f3177fc3bb2ae0002ed09f7e944f7a34d8c8a85f1753c6fec157d7a8ff6fec1e)
 * [Alcance de comunidad](https://github.com/crixus2005/pinguinokbron/commit/0c0a2c1dc68faf80ef843083e49ae37949a62ca4#diff-6cf0489f724b68b8517afdf54b09f5ebb75739e17a0d6526ae4948dea9bf4888)
 * [Presupuesto estimado](https://github.com/crixus2005/pinguinokbron/commit/e58ef288359a68b44db169183cb8d9c58705de88#diff-a4df630578d63e78a6d9fd9bb66cd72efda7277f88c442d38847f2995ed89070)
